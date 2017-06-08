@@ -55507,7 +55507,7 @@ angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.s
 
               if (tooltip) {
                 tooltip.remove();
-                
+
                 tooltip = null;
                 if (adjustmentTimeout) {
                   $timeout.cancel(adjustmentTimeout);
@@ -55515,7 +55515,7 @@ angular.module('ui.bootstrap.tooltip', ['ui.bootstrap.position', 'ui.bootstrap.s
               }
 
               openedTooltips.remove(ttScope);
-              
+
               if (tooltipLinkedScope) {
                 tooltipLinkedScope.$destroy();
                 tooltipLinkedScope = null;
@@ -57788,6 +57788,24 @@ angular.module('app')
     });
 
 angular.module('app')
+    .service('ProfileService', function($http) {
+        return {
+            getAll: function() {
+                return $http.get('/users');
+            },
+            getOne: function(id) {
+                return $http.get('/users/' + id);
+            },
+            update: function(id, user) {
+                return $http.put('/users/' + id, user);
+            },
+            delete: function(id) {
+                return $http.delete('/users/' + id);
+            }
+        };
+    });
+
+angular.module('app')
     .service('UserService', function($http) {
         return {
             getAll: function() {
@@ -57845,8 +57863,18 @@ angular.module('app')
     });
 
 angular.module('app')
-    .controller('ProfileController', function($scope, CurrentUser) {
+    .controller('ProfileController', function($scope, CurrentUser, UserService) {
       $scope.user = CurrentUser.user();
+      console.log($scope.user.email);
+
+      function loadAllUsers() {
+        UserService.getAll().then(function(res) {
+          console.log('listUsers', res);
+          $scope.listUsers = res.data;
+          console.log('res.data', res.data);
+        });
+      }
+      loadAllUsers();
     });
 
 angular.module('app')
@@ -57878,7 +57906,7 @@ angular.module('app')
                 views: {
                     'content@': {
                         templateUrl: 'anon/home.html',
-                        controller: 'MainController'
+                        controller: 'ProfileController'
                     }
                 }
             })
@@ -57938,7 +57966,37 @@ angular.module('app')
 angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/home.html",
-    "<h1>Hello World</h1>"
+    "<div class=\"container-fluid\">\n" +
+    "  <h1 class=\"title\">Chrono Love</h1>\n" +
+    "  <div class=\"container-fluid content\">\n" +
+    "    <div class=\"row\">\n" +
+    "     <div class=\"col-xs-2 col-md-3 profil\">\n" +
+    "      <div class=\"well pull-left\">\n" +
+    "        <img class=\"imageResize\" src=\"http://www2.l1visible.com/wp-content/uploads/2013/06/FRANCIS.png\">\n" +
+    "          <br><span id=\"profilName\">\n" +
+    "            <br> {{user.lastname}} {{user.firstname}}\n" +
+    "          </span>\n" +
+    "\n" +
+    "      </div>\n" +
+    "     </div>\n" +
+    "      <div class=\"col-md-offset-1 col-md-7\">\n" +
+    "        <div class=\"row\">\n" +
+    "        <div class=\"container\">\n" +
+    "          <div class=\"row\">\n" +
+    "            <div class=\"col-xs-5 col-md-4\" ng-repeat=\"user in listUsers\">\n" +
+    "                  <div class=\"well pull-left\" id=\"ticket\">\n" +
+    "                    {{user.email}}<br>\n" +
+    "                    {{user.pseudo}}<br>\n" +
+    "                    {{user.sexe}}<br>\n" +
+    "\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "       </div>\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "  </div>\n"
   );
 
   $templateCache.put("anon/login.html",
@@ -57992,20 +58050,37 @@ angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/register.html",
     "<div class=\"row\">\n" +
-    "    <div class=\"col-xs-6 col-xs-offset-3\">\n" +
-    "        <form class=\"form\" name=\"loginForm\" novalidate ng-submit=\"register()\">\n" +
-    "            <div ng-repeat=\"error in errors\">{{error.error}}</div>\n" +
-    "            <div class=\"input-group\">\n" +
-    "                <span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-user\"></i></span>\n" +
-    "                <input id=\"email\" type=\"email\" class=\"form-control\" ng-model=\"user.email\" required placeholder=\"Email Address\">\n" +
-    "            </div>\n" +
-    "            <div class=\"input-group\">\n" +
-    "                <span class=\"input-group-addon\"><i class=\"glyphicon glyphicon-lock\"></i></span>\n" +
-    "                <input id=\"password\" type=\"password\" class=\"form-control\" ng-model=\"user.password\" required placeholder=\"Password\">\n" +
-    "            </div>\n" +
-    "            <button type=\"submit\" class=\"btn btn-primary btn-block\">Register</button>\n" +
-    "        </form>\n" +
-    "    </div>\n" +
+    "  <div class=\"col-xs-6 col-xs-offset-3\">\n" +
+    "    <form class=\"form\" name=\"loginForm\" novalidate ng-submit=\"register()\">\n" +
+    "      <div ng-repeat=\"error in errors\">{{error.error}}</div>\n" +
+    "      <div class=\"input-group\">\n" +
+    "        <label>Je suis ...\n" +
+    "        <select id=\"sexe\" type=\"sexe\" class=\"form-control\" ng-model=\"user.sexe\" placeholder=\"sexe\">\n" +
+    "        </label>\n" +
+    "        <option value=\"Homme\">Je suis un Homme</option>\n" +
+    "        <option value=\"Femme\">Je suis une Femme</option>\n" +
+    "      </div>\n" +
+    "      <div class=\"input-group\">\n" +
+    "        <input id=\"firstname\" type=\"firstname\" class=\"form-control\" ng-model=\"user.firstname\" placeholder=\"firstname\">\n" +
+    "      </div>\n" +
+    "      <div class=\"input-group\">\n" +
+    "        <input id=\"lastname\" type=\"lastname\" class=\"form-control\" ng-model=\"user.lastname\" placeholder=\"lastname\">\n" +
+    "      </div>\n" +
+    "      <div class=\"input-group\">\n" +
+    "        <input id=\"age\" type=\"age\" class=\"form-control\" ng-model=\"user.age\" placeholder=\"age\">\n" +
+    "      </div>\n" +
+    "      <div class=\"input-group\">\n" +
+    "        <input id=\"pseudo\" type=\"pseudo\" class=\"form-control\" ng-model=\"user.pseudo\" placeholder=\"pseudo\">\n" +
+    "      </div>\n" +
+    "      <div class=\"input-group\">\n" +
+    "        <input id=\"mail\" type=\"mail\" class=\"form-control\" ng-model=\"user.email\" placeholder=\"adresse mail\">\n" +
+    "      </div>\n" +
+    "      <div class=\"input-group\">\n" +
+    "        <input id=\"password\" type=\"password\" class=\"form-control\" ng-model=\"user.password\" placeholder=\"Password\">\n" +
+    "      </div>\n" +
+    "      <button type=\"submit\" class=\"btn btn-primary btn-block\">Register</button>\n" +
+    "    </form>\n" +
+    "  </div>\n" +
     "</div>\n"
   );
 

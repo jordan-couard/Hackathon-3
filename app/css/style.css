@@ -1,0 +1,25 @@
+h1 {
+  text-align: center;
+}
+
+.profil {
+  border: 1px solid;
+}
+
+#ticket {
+  width: 300px;
+  height: 300px;
+}
+
+body {
+  background-color: lightgrey;
+  width: 100%;
+}
+.imageResize {
+  max-width: 100%;
+}
+
+#profilName {
+  font-weight: bold;
+  letter-spacing: 2px;
+}

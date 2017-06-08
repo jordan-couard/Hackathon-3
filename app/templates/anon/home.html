@@ -1,1 +1,31 @@
-<h1>Hello World</h1>
+<div class="container-fluid">
+  <h1 class="title">Chrono Love</h1>
+  <div class="container-fluid content">
+    <div class="row">
+     <div class="col-xs-2 col-md-3 profil">
+      <div class="well pull-left">
+        <img class="imageResize" src="http://www2.l1visible.com/wp-content/uploads/2013/06/FRANCIS.png">
+          <br><span id="profilName">
+            <br> {{user.lastname}} {{user.firstname}}
+          </span>
+
+      </div>
+     </div>
+      <div class="col-md-offset-1 col-md-7">
+        <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-5 col-md-4" ng-repeat="user in listUsers">
+                  <div class="well pull-left" id="ticket">
+                    {{user.email}}<br>
+                    {{user.pseudo}}<br>
+                    {{user.sexe}}<br>
+
+                </div>
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
