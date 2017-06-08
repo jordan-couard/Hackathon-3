@@ -7349,9 +7349,11 @@ button.close {
   margin-bottom: 0;
 
 }
+.title-site{
+  font-size: 32px;
 
+}
 .logo{
-  position: absolute;
   height: 75px;
 }
 .profile{
@@ -7366,10 +7368,10 @@ button.close {
 }
 .container{
   padding-top: 25px;
-  margin-top: 50px;
+  margin-top: 250px;
   margin-left: 60px;
-  height: 450px;
-  background-color: rgba(255, 255, 255, 0.7);
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 15px;
   color: maroon;
 

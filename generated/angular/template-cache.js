@@ -108,7 +108,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
   $templateCache.put("user/profile.html",
     "<div class=\"container-fluid profile\">\n" +
     "  <div class=\"jumbotron\">\n" +
-    "    <h1>Chrono Lo<span><img class=\"logo\" src=\"img/logolove.svg\" alt=\"logo\">e</span></h1>\n" +
+    "    <h1 class=\"title-site\">Chrono Lo<span><img class=\"logo\" src=\"img/logolove.svg\" alt=\"logo\">e</span></h1>\n" +
     "  </div>\n" +
     "  <div class=\"row description\">\n" +
     "    <div class=\"col-xs-12 container\">\n" +
@@ -132,6 +132,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "       <option>sans emploi</option>\n" +
     "       <option>retraité(e)</option>\n" +
     "     </select>\n" +
+    "     <br>\n" +
     "     <label for=\"sel2\">Ta recherche:</label>\n" +
     "     <select class=\"form-control\" id=\"sel2\">\n" +
     "       <option>un flirt</option>\n" +
@@ -139,10 +140,9 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "       <option>un bout de chemin </option>\n" +
     "       <option>le grand Amour</option>\n" +
     "     </select>\n" +
-    "   </div>\n" +
+    "     <br>\n" +
     "     <label for=\"sel2\">Son âge:</label>\n" +
     "     <select class=\"form-control\" id=\"sel2\">\n" +
-    "       <option></option>\n" +
     "       <option>entre 18 et 25</option>\n" +
     "       <option>entre 25 et 30</option>\n" +
     "       <option>entre 30 et 35</option>\n" +
@@ -153,7 +153,12 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "       <option>entre 55 et 60</option>\n" +
     "       <option>entre 60 et 65</option>\n" +
     "     </select>\n" +
-    "   </div>\n" +
+    "     <br>\n" +
+    "     <label for=\"sel2\">Tu cherches:</label>\n" +
+    "     <select class=\"form-control\" id=\"sel2\">\n" +
+    "       <option>un homme</option>\n" +
+    "       <option>une femme</option>\n" +
+    "           </select>\n" +
     " </form>\n" +
     "    </div>\n" +
     "\n" +
