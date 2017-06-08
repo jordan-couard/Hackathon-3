@@ -107,7 +107,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("user/profile.html",
     "<div class=\"container-fluid profile\">\n" +
-    "  <div class=\" jumbotron\">\n" +
+    "  <div class=\"jumbotron\">\n" +
     "    <h1>Chrono Lo<span><img class=\"logo\" src=\"img/logolove.svg\" alt=\"logo\">e</span></h1>\n" +
     "  </div>\n" +
     "  <div class=\"row description\">\n" +
@@ -138,6 +138,20 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "       <option>une companie</option>\n" +
     "       <option>un bout de chemin </option>\n" +
     "       <option>le grand Amour</option>\n" +
+    "     </select>\n" +
+    "   </div>\n" +
+    "     <label for=\"sel2\">Son âge:</label>\n" +
+    "     <select class=\"form-control\" id=\"sel2\">\n" +
+    "       <option></option>\n" +
+    "       <option>entre 18 et 25</option>\n" +
+    "       <option>entre 25 et 30</option>\n" +
+    "       <option>entre 30 et 35</option>\n" +
+    "       <option>entre 35 et 40</option>\n" +
+    "       <option>entre 40 et 45</option>\n" +
+    "       <option>entre 45 et 50</option>\n" +
+    "       <option>entre 50 et 55</option>\n" +
+    "       <option>entre 55 et 60</option>\n" +
+    "       <option>entre 60 et 65</option>\n" +
     "     </select>\n" +
     "   </div>\n" +
     " </form>\n" +
