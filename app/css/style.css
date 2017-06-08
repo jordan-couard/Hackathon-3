@@ -1,0 +1,28 @@
+.jumbotron{
+  background-color: maroon;
+  color: #ea7500;
+  margin-bottom: 0;
+}
+
+.logo{
+  position: absolute;
+  height: 75px;
+}
+.profile{
+  width: 100%;
+  min-height: 85em;
+  /*margin-top: 20px;*/
+  background-image: url(/img/image-couple-4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+.container{
+  margin-top: 50px,
+  margin-left: 80px;
+}
+.description{
+  height: 600px;
+  width: 80%;
+  background-color: rgba(66, 156, 254, 0.5);
+}
