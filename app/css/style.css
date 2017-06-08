@@ -1,7 +1,9 @@
 .jumbotron{
   background-color: maroon;
+  width: 100%;
   color: #ea7500;
   margin-bottom: 0;
+
 }
 
 .logo{
@@ -15,14 +17,21 @@
   background-image: url(/img/image-couple-4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
+  background-position: center;
+
 }
 .container{
-  margin-top: 50px,
-  margin-left: 80px;
+  margin-top: 50px;
+  margin-left: 60px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  color: maroon;
+
 }
 .description{
   height: 600px;
-  width: 80%;
-  background-color: rgba(66, 156, 254, 0.5);
+  width: 50%;
+  margin-top: 320px;
+  margin-left: 300px;
+
 }

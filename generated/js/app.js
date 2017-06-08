@@ -58043,41 +58043,45 @@ angular.module("app").run(["$templateCache", function($templateCache) {
   );
 
   $templateCache.put("user/profile.html",
-    "<div class=\" jumbotron\">\n" +
-    "  <h1>Chrono Lo<img class=\"logo\" src=\"img/logolove.svg\" alt=\"logo\">    e</h1>\n" +
-    "</div>\n" +
     "<div class=\"container-fluid profile\">\n" +
-    "  <div class=\"row container\">\n" +
-    "    <div class=\"col-xs-12\">\n" +
-    "      <div class=\"row description\">\n" +
-    "        <h1>description physique</h1>\n" +
-    "        <h2>silhouette</h2>\n" +
-    "        <div class=\"col-xs-2\" \"checkbox-inline\">\n" +
-    "          <label for=\"\">svelte</label>\n" +
-    "          <input type=\"checkbox\" name=\"\" value=\"option1\">\n" +
-    "        </div>\n" +
-    "        <div class=\"col-xs-2\" \"checkbox-inline\">\n" +
-    "          <label for=\"\">normal</label>\n" +
-    "          <input type=\"checkbox\" name=\"\" value=\"option2\">\n" +
-    "        </div>\n" +
-    "        <div class=\" col-xs-2\" \"checkbox-inline\">\n" +
-    "          <label for=\"\">athetique</label>\n" +
-    "          <input type=\"checkbox\" name=\"\" value=\"option3\">\n" +
-    "        </div>\n" +
-    "        <div class=\" col-xs-2\" \"checkbox-inline\">\n" +
-    "          <label for=\"\">sportif</label>\n" +
-    "          <input type=\"checkbox\" name=\"\" value=\"option4\">\n" +
-    "        </div>\n" +
-    "        <div class=\" col-xs-2\" \"checkbox-inline\">\n" +
-    "          <label for=\"\">enrobé</label>\n" +
-    "          <input type=\"checkbox\" name=\"\" value=\"option4\">\n" +
-    "        </div>\n" +
-    "\n" +
-    "      </div>\n" +
-    "\n" +
+    "  <div class=\" jumbotron\">\n" +
+    "    <h1>Chrono Lo<span><img class=\"logo\" src=\"img/logolove.svg\" alt=\"logo\">e</span></h1>\n" +
+    "  </div>\n" +
+    "  <div class=\"row description\">\n" +
+    "    <div class=\"col-xs-12 container\">\n" +
+    "      <h2>Description</h2>\n" +
+    " <form>\n" +
+    "   <div class=\"form-group\">\n" +
+    "     <label for=\"sel1\">Ta silhouette:</label>\n" +
+    "     <select class=\"form-control\" id=\"sel1\">\n" +
+    "       <option>svelte</option>\n" +
+    "       <option>normal(e)</option>\n" +
+    "       <option>athlétique</option>\n" +
+    "       <option>musclé(e)</option>\n" +
+    "       <option>fort(e)</option>\n" +
+    "     </select>\n" +
+    "     <br>\n" +
+    "     <label for=\"sel2\">Ta situation professionnelle:</label>\n" +
+    "     <select class=\"form-control\" id=\"sel2\">\n" +
+    "       <option>étudiant(e)</option>\n" +
+    "       <option>salarié(e)</option>\n" +
+    "       <option>à mon compte</option>\n" +
+    "       <option>sans emploi</option>\n" +
+    "       <option>retraité(e)</option>\n" +
+    "     </select>\n" +
+    "     <label for=\"sel2\">Ta recherche:</label>\n" +
+    "     <select class=\"form-control\" id=\"sel2\">\n" +
+    "       <option>un flirt</option>\n" +
+    "       <option>une companie</option>\n" +
+    "       <option>un bout de chemin </option>\n" +
+    "       <option>le grand Amour</option>\n" +
+    "     </select>\n" +
+    "   </div>\n" +
+    " </form>\n" +
     "    </div>\n" +
     "\n" +
-    "  </div>\n"
+    "  </div>\n" +
+    "</div>\n"
   );
 
 }]);
