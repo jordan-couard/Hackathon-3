@@ -1,7 +1,7 @@
 angular.module('app')
     .controller('ProfileController', function($scope, CurrentUser, UserService) {
-      $scope.user = CurrentUser.user();
-      console.log($scope.user.email);
+      $scope.puser = CurrentUser.user();
+      console.log($scope.user);
 
       function loadAllUsers() {
         UserService.getAll().then(function(res) {

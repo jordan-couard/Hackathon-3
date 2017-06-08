@@ -4,29 +4,33 @@
       <div ng-repeat="error in errors">{{error.error}}</div>
       <div class="input-group">
         <label>Je suis ...
-        <select id="sexe" type="sexe" class="form-control" ng-model="user.sexe" placeholder="sexe">
+        <select type="sexe" class="form-control" ng-model="user.sexe" placeholder="sexe">
         </label>
-        <option value="Homme">Je suis un Homme</option>
-        <option value="Femme">Je suis une Femme</option>
+        <option value="Homme">Un Homme</option>
+        <option value="Femme">Une Femme</option>
       </div>
       <div class="input-group">
-        <input id="firstname" type="firstname" class="form-control" ng-model="user.firstname" placeholder="firstname">
+        <input type="firstname" class="form-control" ng-model="user.firstname" placeholder="firstname">
       </div>
       <div class="input-group">
-        <input id="lastname" type="lastname" class="form-control" ng-model="user.lastname" placeholder="lastname">
+        <input type="lastname" class="form-control" ng-model="user.lastname" placeholder="lastname">
       </div>
       <div class="input-group">
-        <input id="age" type="age" class="form-control" ng-model="user.age" placeholder="age">
+        <input type="age" class="form-control" ng-model="user.age" placeholder="age">
       </div>
       <div class="input-group">
-        <input id="pseudo" type="pseudo" class="form-control" ng-model="user.pseudo" placeholder="pseudo">
+        <input type="pseudo" class="form-control" ng-model="user.pseudo" placeholder="pseudo">
       </div>
       <div class="input-group">
-        <input id="mail" type="mail" class="form-control" ng-model="user.email" placeholder="adresse mail">
+        <input type="mail" class="form-control" ng-model="user.email" placeholder="adresse mail">
       </div>
       <div class="input-group">
-        <input id="password" type="password" class="form-control" ng-model="user.password" placeholder="Password">
+        <input type="password" class="form-control" ng-model="user.password" placeholder="Password">
       </div>
+      <div class="input-group">
+        <input type="text" class="form-control" ng-model="user.image" placeholder="URL de la photo">
+      </div>
+
       <button type="submit" class="btn btn-primary btn-block">Register</button>
     </form>
   </div>
