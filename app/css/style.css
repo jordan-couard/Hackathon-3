@@ -1,3 +1,46 @@
+
+.jumbotron{
+  background-color: maroon;
+  width: 100%;
+  color: #ea7500;
+  margin-bottom: 0;
+
+}
+.title-site{
+  font-size: 32px;
+
+}
+.logo{
+  height: 75px;
+}
+.profile{
+  width: 100%;
+  min-height: 85em;
+  /*margin-top: 20px;*/
+  background-image: url(/img/image-couple-4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.container{
+  padding-top: 25px;
+  margin-top: 250px;
+  margin-left: 60px;
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  color: maroon;
+
+}
+.description{
+  height: 1400px;
+  width: 50%;
+  margin-top: 220px;
+  margin-left: 300px;
+
+}
+=======
 h1 {
   text-align: center;
 }
@@ -353,3 +396,4 @@ box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.16);
         z-index: 5;
         visibility: visible;
     }
+
