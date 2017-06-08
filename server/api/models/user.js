@@ -23,23 +23,29 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     firstname: {
-        type: String
+        type: String,
+        required: true
     },
     lastname: {
-        type: String
+        type: String,
+        required: true
     },
     age: {
-        type: String
+        type: String,
+        required: true
     },
     pseudo: {
-        type: String
+        type: String,
+        required: true
     },
     sexe: {
-        type: String
+        type: String,
+        required: true
     },
     isAdmin: {
         type: Boolean,
-        default: false
+        default: false,
+        required: true
     }
 });
 

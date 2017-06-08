@@ -18,11 +18,13 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "        <div class=\"row\">\n" +
     "        <div class=\"container\">\n" +
     "          <div class=\"row\">\n" +
-    "            <div class=\"col-xs-5 col-md-4\" ng-repeat=\"user in users\">\n" +
-    "              <div class=\"well pull-left\" id=\"ticket\">\n" +
-    "                  afficher :{{$scope.user.age}}<br>\n" +
-    "              </div>\n" +
-    "            </div>\n" +
+    "            <div class=\"col-xs-5 col-md-4\" ng-repeat=\"user in listUsers\">\n" +
+    "                  <div class=\"well pull-left\" id=\"ticket\">\n" +
+    "                    {{user.email}}<br>\n" +
+    "                    {{user.pseudo}}<br>\n" +
+    "                    {{user.sexe}}<br>\n" +
+    "\n" +
+    "                </div>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "        </div>\n" +
