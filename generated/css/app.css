@@ -7342,6 +7342,10 @@ button.close {
   }
 }
 
+.navbar-default{
+  background-color: maroon;
+  color: #ea7500;
+}
 .jumbotron{
   background-color: maroon;
   width: 100%;
