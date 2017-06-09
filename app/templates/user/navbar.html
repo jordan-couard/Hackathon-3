@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default" role="navigation" ng-controller="NavbarController">
-    <div class="container-fluid light">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -11,8 +11,6 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li ui-sref-active="active"><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Chrono Lo<span><img class="logoNavbar" src="img/logolove.svg" alt="logo">e</span></a></li>
-               
               <li ui-sref-active="active"><a ui-sref="user.home">Website</a></li>
               <li ui-sref-active="active"><a ui-sref="user.chat" ng-show="auth.isAuthenticated()">Messagerie</a></li>
               <li ui-sref-active="active"><a ui-sref="user.profile" ng-show="auth.isAuthenticated()">Profil</a></li>
