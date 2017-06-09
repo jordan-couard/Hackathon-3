@@ -37,7 +37,8 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "        </div>\n" +
     "        <div class=\"collapse navbar-collapse\" id=\"navbar\">\n" +
     "            <ul class=\"nav navbar-nav\">\n" +
-    "                <li ui-sref-active=\"active\"><a ui-sref=\"anon.home\">Home</a></li>\n" +
+    "                <li ui-sref-active=\"active\"><a ui-sref=\"anon.home\">Chrono Lo<span><img class=\"logoNavbar\" src=\"img/logolove.svg\" alt=\"logo\">e</span></a>\n" +
+    "</li>\n" +
     "\n" +
     "            </ul>\n" +
     "            <ul class=\"nav navbar-nav navbar-right\">\n" +
@@ -90,7 +91,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
     "        </div>\n" +
     "        <div class=\"collapse navbar-collapse\" id=\"navbar\">\n" +
     "            <ul class=\"nav navbar-nav\">\n" +
-    "                <li ui-sref-active=\"active\"><a ui-sref=\"user.dashboard\" ng-show=\"auth.isAuthenticated()\">Dashboard</a></li>\n" +
+    "                <li ui-sref-active=\"active\"><a ui-sref=\"user.dashboard\" ng-show=\"auth.isAuthenticated()\">Chrono Lo<span><img class=\"logoNavbar\" src=\"img/logolove.svg\" alt=\"logo\">e</span></a></li>\n" +
     "                <li ui-sref-active=\"active\"><a ui-sref=\"user.profile\" ng-show=\"auth.isAuthenticated()\">Profile</a></li>\n" +
     "\n" +
     "            </ul>\n" +

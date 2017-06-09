@@ -12,6 +12,9 @@
 .logo{
   height: 75px;
 }
+.logoNavbar{
+  height: 35px;
+}
 .profile{
   width: 100%;
   min-height: 85em;
