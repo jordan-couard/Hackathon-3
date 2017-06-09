@@ -1,16 +1,37 @@
 <div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-        <form class="form" name="loginForm" novalidate ng-submit="register()">
-            <div ng-repeat="error in errors">{{error.error}}</div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
-            </div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-        </form>
-    </div>
+  <div class="col-xs-6 col-xs-offset-3">
+    <form class="form" name="loginForm" novalidate ng-submit="register()">
+      <div ng-repeat="error in errors">{{error.error}}</div>
+      <div class="input-group">
+        <label>Je suis ...
+        <select type="sexe" class="form-control" ng-model="user.sexe" placeholder="sexe">
+        </label>
+        <option value="Homme">Un Homme</option>
+        <option value="Femme">Une Femme</option>
+      </div>
+      <div class="input-group">
+        <input type="firstname" class="form-control" ng-model="user.firstname" placeholder="firstname">
+      </div>
+      <div class="input-group">
+        <input type="lastname" class="form-control" ng-model="user.lastname" placeholder="lastname">
+      </div>
+      <div class="input-group">
+        <input type="age" class="form-control" ng-model="user.age" placeholder="age">
+      </div>
+      <div class="input-group">
+        <input type="pseudo" class="form-control" ng-model="user.pseudo" placeholder="pseudo">
+      </div>
+      <div class="input-group">
+        <input type="mail" class="form-control" ng-model="user.email" placeholder="adresse mail">
+      </div>
+      <div class="input-group">
+        <input type="password" class="form-control" ng-model="user.password" placeholder="Password">
+      </div>
+      <div class="input-group">
+        <input type="text" class="form-control" ng-model="user.image" placeholder="URL de la photo">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
+    </form>
+  </div>
 </div>
