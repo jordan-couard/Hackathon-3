@@ -30,24 +30,25 @@
   </div> -->
 <div class="container MyProfil">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-5">
       <!-- <p class=text-center>lol</p> -->
       <div class="card-container">
+        <h2>Aperçu de ma carte!</h2>
           <div class="card">
               <div class="front">
                   <div class="cover">
                       <img src="http://www.hdimageson.com/wp-content/uploads/2016/05/beach-images-tumblr-300x188.jpg"/>
                   </div>
                   <div class="user">
-                      <img class="img-circle" src="{{user.image}}"/>
+                      <img class="img-circle" src="{{puser.image}}"/>
                   </div>
                   <div class="content">
                       <div class="main">
-                          <h3 class="name">{{user.firstname}}</h3>
-                          <h3 class="name">{{user.lastname}}</h3>
-                          <p class="profession">{{user.age}}Ans</p>
+                          <h3 class="name">{{puser.firstname}}</h3>
+                          <h3 class="name">{{puser.lastname}}</h3>
+                          <p class="profession">{{puser.age}}Ans</p>
 
-                          <p class="text-center">{{user.sexe}}</p>
+                          <p class="text-center">{{puser.sexe}}</p>
                       </div>
                       <div class="footer">
                           <div class="rating">
@@ -62,12 +63,12 @@
                   </div>
                   <div class="content">
                       <div class="main">
-                          <h4 class="text-center">{{user.firstname}} {{user.lastname}}</h4>
+                          <h4 class="text-center">{{puser.firstname}} {{puser.lastname}}</h4>
                           <p class="text-center">Je suis a la recherche : </p><br><br><br>
 
                           <div class="text-center">
                               <div class="text-center">
-                                  <h4>{{user.age * 6}}</h4>
+                                  <h4>{{puser.age * 6}}</h4>
                                   <p>
                                       Prise de contact
                                   </p>
@@ -78,10 +79,39 @@
               </div> <!-- end back panel -->
           </div> <!-- end card -->
       </div> <!-- end card-container -->
-  </div> <!-- end col-sm-3 -->
+  </div> <!-- end card my profil -->
+  <div class="col-sm-offset-2 col-sm-5">
+    <form class="formfilter">
+      <h3>Vos critères :</h3>
+      <p>Son Sexe :</p>
+      <select>
+      <option value="Homme">Homme</option>
+      <option value="Femme">Femme</option>
+    </select><br>
+      <p>Son Age :</p>
+      <select>
+        <option value="">entre 18 et 25</option>
+        <option value="">entre 25 et 30</option>
+        <option value="">entre 30 et 35</option>
+        <option value="">entre 35 et 40</option>
+        <option value="">entre 40 et 45</option>
+        <option value="">entre 45 et 50</option>
+        <option value="">entre 50 et 55</option>
+        <option value="">entre 55 et 60</option>
+        <option value="">entre 60 et 65</option>
+      </select><br>
+      <p>Ses Envies :</p>
+      <select>
+        <option>un flirt</option>
+        <option>une companie</option>
+        <option>un bout de chemin </option>
+        <option>le grand Amour</option>
+      </select>
+    </form>
+  </div>
   </div> <!-- end col-sm-10 -->
 </div> <!-- end row -->
-</div>
+</div><br>
 
     </div>
   </div>
@@ -114,22 +144,27 @@
                       </div> <!-- end front panel -->
                       <div class="back">
                           <div class="header">
-                              <h5 class="motto">CITATION</h5>
+                              <h5 class="motto">Profil de {{user.pseudo}}</h5>
                           </div>
                           <div class="content">
                               <div class="main">
                                   <h4 class="text-center">{{user.firstname}} {{user.lastname}}</h4>
-                                  <p class="text-center">Je suis a la recherche : </p><br><br><br>
+                                  <p class="text-center"><span ng-if="user.sexe == 'Femme'">Je suis a la recherche d'un Homme</span><span ng-if="user.sexe == 'Homme'">Je suis a la recherche d'une Femme</span></p><br><br><br>
 
-                                  <div class="text-center">
-                                      <div class="text-center">
+                                  <div class="text-center middlecard">
+                                    <h5>Description :</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                      <div class="text-center descriptioncard">
                                           <h4>{{user.age * 6}}</h4>
                                           <p>
-                                              Prise de contact
+                                              Prise de contact avec cette personne.
                                           </p>
                                       </div>
                                   </div>
                               </div>
+                          </div>
+                          <div class="forBtn">
+                            <a ui-sref="user.chat"><button type="button" class="btn btn-success" name="button">Lancer une discussion</button></a>
                           </div>
                       </div> <!-- end back panel -->
                   </div> <!-- end card -->
