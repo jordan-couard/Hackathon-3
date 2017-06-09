@@ -25,7 +25,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("anon/navbar.html",
     "<nav class=\"navbar navbar-default\" role=\"navigation\" ng-controller=\"NavbarController\">\n" +
-    "    <div class=\"container-fluid\">\n" +
+    "    <div class=\"container-fluid light\">\n" +
     "        <div class=\"navbar-header\">\n" +
     "            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#navbar\">\n" +
     "        <span class=\"sr-only\">Toggle navigation</span>\n" +
@@ -79,7 +79,7 @@ angular.module("app").run(["$templateCache", function($templateCache) {
 
   $templateCache.put("user/navbar.html",
     "<nav class=\"navbar navbar-default\" role=\"navigation\" ng-controller=\"NavbarController\">\n" +
-    "    <div class=\"container-fluid\">\n" +
+    "    <div class=\"container-fluid light\">\n" +
     "        <div class=\"navbar-header\">\n" +
     "            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#navbar\">\n" +
     "        <span class=\"sr-only\">Toggle navigation</span>\n" +

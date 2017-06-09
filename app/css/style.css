@@ -1,35 +1,56 @@
-.navbar-default{
-  background-color: maroon;
+.navbar-default .navbar-nav>li>a {
+color: #ea7500;
+  font-size: 2em;
+
+}
+.active{
+  color: none;
+}
+.light{
+  padding-right: 0px;
+    padding-left: 0px;
+}
+.navbar{
+  margin-bottom: 0px;
+  border: 0px;
+}
+#navbar {
+  background-color: black;
   color: #ea7500;
 }
-.jumbotron{
+
+.jumbotron {
   background-color: maroon;
   width: 100%;
   color: #ea7500;
   margin-bottom: 0;
-
 }
-.title-site{
+
+.title-site {
   font-size: 32px;
-
 }
-.logo{
+
+.logo {
   height: 75px;
 }
-.logoNavbar{
+
+.logoNavbar {
   height: 35px;
 }
-.profile{
+
+.profile {
   width: 100%;
   min-height: 85em;
   /*margin-top: 20px;*/
+  padding-left: 0px;
+  padding-right: 0px;
   background-image: url(/img/image-couple-4.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
 }
-.container{
+
+.container {
   padding-top: 25px;
   margin-top: 250px;
   margin-left: 60px;
@@ -37,12 +58,11 @@
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 15px;
   color: maroon;
-
 }
-.description{
+
+.description {
   height: 1400px;
   width: 50%;
   margin-top: 220px;
   margin-left: 300px;
-
 }
