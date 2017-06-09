@@ -12,12 +12,14 @@
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
                 <li ui-sref-active="active"><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Chrono Lo<span><img class="logoNavbar" src="img/logolove.svg" alt="logo">e</span></a></li>
-                <li ui-sref-active="active"><a ui-sref="user.profile" ng-show="auth.isAuthenticated()">Profile</a></li>
+               
+              <li ui-sref-active="active"><a ui-sref="user.home">Website</a></li>
+              <li ui-sref-active="active"><a ui-sref="user.chat" ng-show="auth.isAuthenticated()">Messagerie</a></li>
+              <li ui-sref-active="active"><a ui-sref="user.profile" ng-show="auth.isAuthenticated()">Profil</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                <li ui-sref-active="active"><a ui-sref="anon.home">Website</a></li>
                     <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
                 </li>
             </ul>
