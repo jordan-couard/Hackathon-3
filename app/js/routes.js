@@ -13,17 +13,17 @@ angular.module('app')
                     }
                 }
             })
-            .state('anon.home', {
-                url: '/',
-                views: {
-                    'content@': {
-                        templateUrl: 'anon/home.html',
-                        controller: 'MainController'
-                    }
-                }
-            })
+            // .state('anon.home', {
+            //     url: '/',
+            //     views: {
+            //         'content@': {
+            //             templateUrl: 'anon/home.html',
+            //             controller: 'ProfileController'
+            //         }
+            //     }
+            // })
             .state('anon.login', {
-                url: '/login',
+                url: '/',
                 views: {
                     'content@': {
                         templateUrl: 'anon/login.html',
@@ -54,12 +54,30 @@ angular.module('app')
                     access: AccessLevels.user
                 }
             })
+            .state('user.home', {
+                url: '/home',
+                views: {
+                    'content@': {
+                        templateUrl: 'user/home.html',
+                        controller: 'ProfileController'
+                    }
+                }
+            })
             .state('user.dashboard', {
                 url: '/dashboard',
                 views: {
                     'content@': {
                         templateUrl: 'user/dashboard.html',
                         controller: 'DashboardController'
+                    }
+                }
+            })
+            .state('user.chat', {
+                url: '/chat',
+                views: {
+                    'content@': {
+                        templateUrl: 'user/chat.html',
+                        controller: 'ProfileController'
                     }
                 }
             })
